@@ -1,33 +1,78 @@
-// faccio scegliere ai pari o dispari
-const equalUn = prompt("Pari o dispari? Fa la tua scelta");
+// faccio scegliere al giocatore pari o dispari e un numero da 1 a 5
+let sceltaUtente = prompt("Pari o dispari? Fa la tua scelta");
 
-// faccio inserire ai giocatore numeri da 1 a 5
-const myNum = [1, 2, 3, 4, 5];
-
-const myChoice = prompt("Inserisci un numero: ");
-
-console.log("Il giocatore X ha scelto: ", equalUn, myChoice);
+let numeroUtente = parseInt(prompt("Inserisci un numero tra 1 e 5"));
 debugger;
 // il computer sceglie il numero random
-const randGen = Math.floor(Math.random() * 5) + 1;
-
-function cpuRand(myChoice, randGen) {
-
-    const result = myChoice + randGen;
-
-    return result;
+function compRandom() {
+    let numeroComputerRandom = Math.floor(Math.random() * 5) + 1;
+    console.log(numeroComputerRandom);
+    return numeroComputer;
 }
 
-let numTot = myChoice + randGen;
+let numeroComputer;
 
-// const total = numTot(myChoice, randGen);
+numeroComputer = compRandom();
+
+let somma;
+
+somma = numeroUtente + numeroComputer;
+console.log(somma);
+
+// se la somma è pari e l'utente sceglie pari, l'utente ha vinto - 1.
+
+// if (somma % 2 === 0 && sceltaUtente == "pari" ) {
+    //l'utente ha vinto
+    // console.log("1");
+// }
+    
+// se la somma è pari e l'utente sceglie dispari, l'utente ha perso - 2.
+// if (somma % 2 === 0 && sceltaUtente == "dispari" ) {
+    //l'utente ha perso
+    // console.log("2");
+// }
+
+// se la somma è dispari e l'utente sceglie dispari, l'utente ha vinto - 3.
+// if (somma % 2 != 0 && sceltaUtente == "dispari" ) {
+    //l'utente ha vinto
+    // console.log("3");
+// }
+// se la somma è dispari e l'utente sceglie pari, l'utente ha perso - 4.
+// if (somma % 2 != 0 && sceltaUtente == "pari" ) {
+    //l'utente ha perso
+    // console.log("1");
+// }
+
+//con un innestato
+
 
 // stabilisco se la somma dei due numeri scelti è pari o dispari
-function totEqUn() {
+function sommaTot() {
 
-    // if (resultEqUn % 2 === 0) {
-    //     risulato = "pari";
-    // } else {
-    //     risulato = "dispari";
-    // }
+    if (somma % 2 === 0 && sceltaUtente == "pari"){
+
+        if (somma % 2 === 0) {
+            risultato = "Hai vinto!"
+        } else {
+            somma % 2 != 0;
+            risultato = "Hai perso!"
+        }
+   
+    } else {
+    
+        if (somma % 2 != 0){
+            sceltaUtente == "dispari";
+            risultato = "Hai vinto!"   
+        } else {
+            somma % 2 === 0;
+            sceltaUtente == "dispari";
+            risultato = "Hai perso!"
+        }   
+    }
 }
+
+// qui dichiaro chi è il vincitore
+let risultato;
+sommaTot();
+console.log(risultato);
+
