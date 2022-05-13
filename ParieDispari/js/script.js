@@ -14,11 +14,6 @@ let numeroComputer;
 
 numeroComputer = compRandom();
 
-let somma;
-
-somma = numeroUtente + numeroComputer;
-console.log(somma);
-
 // se la somma è pari e l'utente sceglie pari, l'utente ha vinto - 1.
 
 // if (somma % 2 === 0 && sceltaUtente == "pari" ) {
@@ -71,8 +66,12 @@ function sommaTot() {
     }
 }
 
+let somma;
+
+somma = numeroUtente + numeroComputer;
+console.log(somma);
+
 // qui dichiaro chi è il vincitore
-let risultato;
 sommaTot();
 console.log(risultato);
 
